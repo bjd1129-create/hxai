@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐲 大唐智能 - 像素办公室</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0F3460 0%, #1a1a2e 100%);
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-bottom: 2px solid #E94560;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            color: #E94560;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        
+        .last-update {
+            background: rgba(233, 69, 96, 0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.85em;
+        }
+        
+        /* Team Grid */
+        .team-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: #E94560;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #E94560;
+        }
+        
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .member-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-3px);
+            border-color: #E94560;
+        }
+        
+        .member-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .member-emoji {
+            font-size: 2em;
+        }
+        
+        .member-name {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .member-role {
+            color: #E94560;
+            font-size: 0.85em;
+            margin-bottom: 8px;
+        }
+        
+        .status-bar {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .status-label {
+            font-size: 0.8em;
+            color: #aaa;
+        }
+        
+        .status-value {
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .status-working { color: #4ade80; }
+        .status-thinking { color: #fbbf24; }
+        .status-idle { color: #9ca3af; }
+        
+        .progress-bar {
+            height: 6px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #E94560, #ff6b6b);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+        
+        .task-info {
+            font-size: 0.8em;
+            color: #ccc;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Work Log Section */
+        .log-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .log-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .log-title {
+            font-size: 1.1em;
+            color: #E94560;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+        }
+        
+        .log-item {
+            font-size: 0.85em;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .log-time {
+            color: #E94560;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .log-member {
+            color: #4ade80;
+            margin-right: 8px;
+        }
+        
+        .log-content {
+            color: #ccc;
+        }
+        
+        /* Stats */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            color: #E94560;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            color: #aaa;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+        
+        /* Auto-refresh indicator */
+        .refresh-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(74, 222, 128, 0.2);
+            border: 1px solid #4ade80;
+            border-radius: 5px;
+            padding: 8px 15px;
+            font-size: 0.85em;
+            color: #4ade80;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .refresh-dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        /* Tier badges */
+        .tier-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.75em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tier-decision { background: rgba(233, 69, 96, 0.3); color: #E94560; }
+        .tier-research { background: rgba(59, 130, 246, 0.3); color: #60a5fa; }
+        .tier-engineering { background: rgba(34, 197, 94, 0.3); color: #4ade80; }
+        .tier-support { background: rgba(251, 191, 36, 0.3); color: #fbbf24; }
+    </style>
+</head>
+<body>
+    <!-- Auto-refresh indicator -->
+    <div class="refresh-indicator">
+        <div class="refresh-dot"></div>
+        <span>60 秒自动刷新</span>
+    </div>
+    
+    <!-- Header -->
+    <div class="header">
+        <h1>🐲 大唐智能 · 像素办公室</h1>
+        <div class="subtitle">Tang Dynasty AI · Pixel Office</div>
+        <div class="last-update" id="lastUpdate">最后更新：加载中...</div>
+    </div>
+    
+    <!-- Stats Bar -->
+    <div class="stats-bar" id="statsBar">
+        <div class="stat-card">
+            <div class="stat-number" id="totalMembers">12</div>
+            <div class="stat-label">团队成员</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="workingMembers">-</div>
+            <div class="stat-label">工作中</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="tasksCompleted">-</div>
+            <div class="stat-label">完成任务</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="successRate">-</div>
+            <div class="stat-label">成功率</div>
+        </div>
+    </div>
+    
+    <!-- Team Section -->
+    <div class="team-section">
+        <h2 class="section-title">👑 决策层</h2>
+        <div class="tier-grid" id="decisionTier"></div>
+        
+        <h2 class="section-title">🔬 研究层</h2>
+        <div class="tier-grid" id="researchTier"></div>
+        
+        <h2 class="section-title">⚙️ 工程层</h2>
+        <div class="tier-grid" id="engineeringTier"></div>
+        
+        <h2 class="section-title">🛡️ 支持层</h2>
+        <div class="tier-grid" id="supportTier"></div>
+    </div>
+    
+    <!-- Work Log Section -->
+    <div class="log-section">
+        <div class="log-card">
+            <h3 class="log-title">📝 工作记录</h3>
+            <div id="workLog"></div>
+        </div>
+        
+        <div class="log-card">
+            <h3 class="log-title">💡 工作思考</h3>
+            <div id="thinkingLog"></div>
+        </div>
+        
+        <div class="log-card">
+            <h3 class="log-title">🤝 工作交互</h3>
+            <div id="interactionLog"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Team configuration
+        const teamConfig = {
+            decision: [
+                { id: 'lixiaomin', name: '李小民', role: 'CEO/首席科学家', emoji: '🐲' },
+                { id: 'fangxuanling', name: '房玄龄', role: 'CTO/技术总监', emoji: '📜' },
+                { id: 'du Ruhui', name: '杜如晦', role: '首席架构师', emoji: '⚖️' }
+            ],
+            research: [
+                { id: 'shenkuo', name: '沈括', role: 'AI 研究院院长', emoji: '🔬' },
+                { id: 'libai', name: '李白', role: 'NLP 首席科学家', emoji: '📝' },
+                { id: 'wangwei', name: '王维', role: 'CV 首席科学家', emoji: '🎨' },
+                { id: 'zhangheng', name: '张衡', role: '多模态科学家', emoji: '🌐' }
+            ],
+            engineering: [
+                { id: 'lijing', name: '李靖', role: '后端架构师', emoji: '⚔️' },
+                { id: 'guoziyi', name: '郭子仪', role: '前端架构师', emoji: '🎨' },
+                { id: 'xuerengui', name: '薛仁贵', role: '全栈工程师', emoji: '🏹' },
+                { id: 'sudingfang', name: '苏定方', role: 'DevOps/MLOps', emoji: '🐳' }
+            ],
+            support: [
+                { id: 'weizheng', name: '魏征', role: '质量与伦理官', emoji: '🪞' }
+            ]
+        };
+        
+        // Status mapping
+        const statusMap = {
+            'working': { text: '工作中', class: 'status-working' },
+            'thinking': { text: '思考中', class: 'status-thinking' },
+            'idle': { text: '待命中', class: 'status-idle' }
+        };
+        
+        // Create member card
+        function createMemberCard(member, statusData) {
+            const status = statusMap[statusData?.status || 'idle'];
+            const progress = statusData?.progress || 0;
+            const task = statusData?.current_task || '暂无任务';
+            const message = statusData?.message || '';
+            
+            return `
+                <div class="member-card">
+                    <span class="tier-badge tier-${member.tier || 'decision'}">${member.tierName}</span>
+                    <div class="member-header">
+                        <span class="member-emoji">${member.emoji}</span>
+                        <div>
+                            <div class="member-name">${member.name}</div>
+                            <div class="member-role">${member.role}</div>
+                        </div>
+                    </div>
+                    <div class="status-bar">
+                        <div class="status-row">
+                            <span class="status-label">状态</span>
+                            <span class="status-value ${status.class}">${status.text}</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">进度</span>
+                            <span class="status-value">${progress}%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progress}%"></div>
+                        </div>
+                    </div>
+                    <div class="task-info">
+                        <strong>当前任务:</strong> ${task}<br>
+                        ${message ? `<em>${message}</em>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Render team
+        function renderTeam(statusData) {
+            const renderTier = (tierId, members, tierName) => {
+                const container = document.getElementById(tierId + 'Tier');
+                container.innerHTML = members.map(member => 
+                    createMemberCard(
+                        { ...member, tier: tierId, tierName },
+                        statusData?.agents?.find(a => a.id === member.id)
+                    )
+                ).join('');
+            };
+            
+            renderTier('decision', teamConfig.decision, '决策层');
+            renderTier('research', teamConfig.research, '研究层');
+            renderTier('engineering', teamConfig.engineering, '工程层');
+            renderTier('support', teamConfig.support, '支持层');
+        }
+        
+        // Render stats
+        function renderStats(stats) {
+            if (!stats) return;
+            document.getElementById('workingMembers').textContent = stats.members_working || 0;
+            document.getElementById('tasksCompleted').textContent = stats.tasks_completed || 0;
+            document.getElementById('successRate').textContent = (stats.success_rate || 0) + '%';
+        }
+        
+        // Render logs
+        function renderLogs(data) {
+            // Work log
+            const workLogEl = document.getElementById('workLog');
+            if (data?.work_log) {
+                workLogEl.innerHTML = data.work_log.slice(0, 10).map(log => `
+                    <div class="log-item">
+                        <span class="log-time">${log.time}</span>
+                        <span class="log-member">${log.member}</span>
+                        <span class="log-content">${log.content}</span>
+                    </div>
+                `).join('');
+            }
+            
+            // Thinking log
+            const thinkingEl = document.getElementById('thinkingLog');
+            if (data?.thinking) {
+                thinkingEl.innerHTML = data.thinking.slice(0, 10).map(think => `
+                    <div class="log-item">
+                        <span class="log-time">${think.time}</span>
+                        <span class="log-member">${think.member}</span>
+                        <span class="log-content">${think.content}</span>
+                    </div>
+                `).join('');
+            }
+            
+            // Interaction log
+            const interactionEl = document.getElementById('interactionLog');
+            if (data?.interactions) {
+                interactionEl.innerHTML = data.interactions.slice(0, 10).map(inter => `
+                    <div class="log-item">
+                        <span class="log-time">${inter.time}</span>
+                        <span class="log-member">${inter.from} → ${inter.to}</span>
+                        <span class="log-content">${inter.content}</span>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        // Fetch and update
+        async function updateStatus() {
+            try {
+                const response = await fetch('http://localhost:3000/status');
+                const data = await response.json();
+                
+                renderTeam(data);
+                renderStats(data.statistics);
+                renderLogs(data);
+                
+                document.getElementById('lastUpdate').textContent = 
+                    '最后更新：' + new Date().toLocaleTimeString('zh-CN');
+            } catch (error) {
+                console.error('Failed to fetch status:', error);
+                document.getElementById('lastUpdate').textContent = 
+                    '最后更新：获取失败 (' + new Date().toLocaleTimeString('zh-CN') + ')';
+            }
+        }
+        
+        // Initial load
+        updateStatus();
+        
+        // Auto-refresh every 60 seconds
+        setInterval(updateStatus, 60000);
+    </script>
+</body>
+</html>
