@@ -1,0 +1,349 @@
+{
+  "version": "3.0",
+  "type": "AI Research Company",
+  "updated_at": "2026-03-23T18:41:00Z",
+  "company": {
+    "name": "大唐智能科技有限公司",
+    "english_name": "Tang Dynasty AI Technologies",
+    "mission": "探索 AI 前沿，创造智能未来",
+    "vision": "成为领先的 AI 研究机构",
+    "values": [
+      "创新",
+      "开放",
+      "协作",
+      "务实"
+    ],
+    "founded": "2026",
+    "location": "中国"
+  },
+  "team": {
+    "size": 12,
+    "structure": "4-tier",
+    "tier1_decision": {
+      "name": "决策层",
+      "members": [
+        {
+          "id": "lixiaomin",
+          "name": "李小民",
+          "role": "CEO/首席科学家",
+          "prototype": "李世民",
+          "responsibilities": [
+            "战略决策",
+            "研究方向",
+            "团队管理"
+          ],
+          "skills": [
+            "AI 战略",
+            "团队领导",
+            "技术洞察"
+          ],
+          "emoji": "🐲"
+        },
+        {
+          "id": "fangxuanling",
+          "name": "房玄龄",
+          "role": "CTO/技术总监",
+          "prototype": "房玄龄",
+          "responsibilities": [
+            "技术路线",
+            "架构设计",
+            "技术选型"
+          ],
+          "skills": [
+            "深度学习",
+            "系统架构",
+            "技术管理"
+          ],
+          "emoji": "📜"
+        },
+        {
+          "id": "du Ruhui",
+          "name": "杜如晦",
+          "role": "首席架构师",
+          "prototype": "杜如晦",
+          "responsibilities": [
+            "方案审核",
+            "质量把控",
+            "性能优化"
+          ],
+          "skills": [
+            "代码审查",
+            "架构设计",
+            "性能优化"
+          ],
+          "emoji": "⚖️"
+        }
+      ]
+    },
+    "tier2_research": {
+      "name": "研究层",
+      "members": [
+        {
+          "id": "shenkuo",
+          "name": "沈括",
+          "role": "AI 研究院院长",
+          "prototype": "沈括",
+          "responsibilities": [
+            "研究方向",
+            "论文评审",
+            "学术交流"
+          ],
+          "skills": [
+            "机器学习",
+            "论文写作",
+            "项目管理"
+          ],
+          "emoji": "🔬"
+        },
+        {
+          "id": "libai",
+          "name": "李白",
+          "role": "NLP 首席科学家",
+          "prototype": "李白",
+          "responsibilities": [
+            "NLP 研究",
+            "LLM 优化",
+            "论文撰写"
+          ],
+          "skills": [
+            "Transformer",
+            "LLM",
+            "自然语言处理"
+          ],
+          "emoji": "📝"
+        },
+        {
+          "id": "wangwei",
+          "name": "王维",
+          "role": "CV 首席科学家",
+          "prototype": "王维",
+          "responsibilities": [
+            "CV 研究",
+            "图像生成",
+            "论文撰写"
+          ],
+          "skills": [
+            "CNN",
+            "Diffusion",
+            "计算机视觉"
+          ],
+          "emoji": "🎨"
+        },
+        {
+          "id": "zhangheng",
+          "name": "张衡",
+          "role": "多模态科学家",
+          "prototype": "张衡",
+          "responsibilities": [
+            "多模态研究",
+            "跨模态学习",
+            "论文撰写"
+          ],
+          "skills": [
+            "多模态融合",
+            "图文理解",
+            "视频分析"
+          ],
+          "emoji": "🌐"
+        }
+      ]
+    },
+    "tier3_engineering": {
+      "name": "工程层",
+      "members": [
+        {
+          "id": "lijing",
+          "name": "李靖",
+          "role": "后端架构师",
+          "prototype": "李靖",
+          "responsibilities": [
+            "后端系统",
+            "API 设计",
+            "性能优化"
+          ],
+          "skills": [
+            "Python",
+            "分布式系统",
+            "数据库"
+          ],
+          "emoji": "⚔️"
+        },
+        {
+          "id": "guoziyi",
+          "name": "郭子仪",
+          "role": "前端架构师",
+          "prototype": "郭子仪",
+          "responsibilities": [
+            "前端系统",
+            "UI/UX",
+            "可视化"
+          ],
+          "skills": [
+            "React",
+            "TypeScript",
+            "数据可视化"
+          ],
+          "emoji": "🎨"
+        },
+        {
+          "id": "xuerengui",
+          "name": "薛仁贵",
+          "role": "全栈工程师",
+          "prototype": "薛仁贵",
+          "responsibilities": [
+            "快速原型",
+            "系统集成",
+            "技术攻坚"
+          ],
+          "skills": [
+            "前后端全栈",
+            "快速开发",
+            "问题解决"
+          ],
+          "emoji": "🏹"
+        },
+        {
+          "id": "sudingfang",
+          "name": "苏定方",
+          "role": "DevOps/MLOps工程师",
+          "prototype": "苏定方",
+          "responsibilities": [
+            "部署运维",
+            "MLOps",
+            "CI/CD"
+          ],
+          "skills": [
+            "Docker",
+            "K8s",
+            "模型部署"
+          ],
+          "emoji": "🐳"
+        }
+      ]
+    },
+    "tier4_support": {
+      "name": "支持层",
+      "members": [
+        {
+          "id": "weizheng",
+          "name": "魏征",
+          "role": "质量与伦理官",
+          "prototype": "魏征",
+          "responsibilities": [
+            "质量监察",
+            "AI 伦理",
+            "风险评估"
+          ],
+          "skills": [
+            "风险评估",
+            "伦理审查",
+            "质量控制"
+          ],
+          "emoji": "🪞"
+        }
+      ]
+    }
+  },
+  "research_directions": {
+    "core": [
+      {
+        "name": "大语言模型（LLM）",
+        "focus": [
+          "模型优化与微调",
+          "RAG 检索增强生成",
+          "Agent 协作系统"
+        ],
+        "lead": "李白"
+      },
+      {
+        "name": "多模态 AI",
+        "focus": [
+          "图文理解与生成",
+          "视频内容分析",
+          "跨模态检索"
+        ],
+        "lead": "张衡"
+      },
+      {
+        "name": "AI Agent 系统",
+        "focus": [
+          "多 Agent 协作",
+          "任务规划与执行",
+          "人机交互"
+        ],
+        "lead": "沈括"
+      },
+      {
+        "name": "MLOps与工程化",
+        "focus": [
+          "模型部署与监控",
+          "持续训练 pipeline",
+          "性能优化"
+        ],
+        "lead": "苏定方"
+      },
+      {
+        "name": "AI 商业化",
+        "focus": [
+          "商业转化路径",
+          "产品化策略",
+          "商业模式设计",
+          "客户场景落地"
+        ],
+        "lead": "李小民",
+        "priority": "core-strategic"
+      },
+      {
+        "name": "AI 商业化",
+        "focus": [
+          "商业转化路径",
+          "产品化策略",
+          "商业模式设计",
+          "客户场景落地"
+        ],
+        "lead": "李小民",
+        "priority": "core-strategic"
+      }
+    ],
+    "exploratory": [
+      "强化学习与决策",
+      "知识图谱与推理",
+      "AI 安全与伦理",
+      "边缘 AI 与优化"
+    ]
+  },
+  "outputs": {
+    "academic": [
+      "技术论文",
+      "技术博客",
+      "技术分享"
+    ],
+    "engineering": [
+      "开源项目",
+      "工具库",
+      "数据集"
+    ],
+    "commercial": [
+      "AI 产品",
+      "技术咨询",
+      "AI 培训"
+    ]
+  },
+  "kpis": {
+    "research": {
+      "papers_per_year": 10,
+      "blog_posts_per_month": 4,
+      "github_stars_per_year": 1000
+    },
+    "engineering": {
+      "open_source_projects_per_year": 5,
+      "api_calls_per_month": 100000,
+      "system_availability": 0.999
+    },
+    "brand": {
+      "website_visits_per_month": 10000,
+      "social_media_followers_per_year": 5000,
+      "industry_influence": "high"
+    }
+  }
+}
