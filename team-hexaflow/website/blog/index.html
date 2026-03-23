@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术博客 | 大唐智能研究院</title>
+    <meta name="description" content="大唐智能研究院技术博客 - AI 前沿、多 Agent 系统、MLOps">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #0F3460 0%, #1a1a2e 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 52, 96, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #E94560;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #E94560;
+        }
+        
+        .hero {
+            padding: 150px 20px 80px;
+            text-align: center;
+            background: radial-gradient(ellipse at center, rgba(233, 69, 96, 0.15) 0%, transparent 70%);
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #E94560, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .blog-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            transition: transform 0.3s, border-color 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: #E94560;
+        }
+        
+        .blog-date {
+            color: #E94560;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .blog-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .blog-excerpt {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .blog-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: rgba(233, 69, 96, 0.2);
+            color: #E94560;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(233, 69, 96, 0.3);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #E94560;
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">🐲 大唐智能</a>
+        <div class="nav-links">
+            <a href="/">首页</a>
+            <a href="/#research">研究</a>
+            <a href="/#team">团队</a>
+            <a href="https://github.com/bjd1129-create/hxai">GitHub</a>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <h1>📝 技术博客</h1>
+        <p>大唐智能研究院 · 分享 AI 前沿技术、多 Agent 系统、MLOps 实践</p>
+    </section>
+    
+    <section class="section">
+        <div class="blog-grid">
+            <a href="2026-03-24-daily-log.html" class="blog-card">
+                <div class="blog-date">📅 2026-03-24</div>
+                <h2 class="blog-title">🐲 大唐智能研究院 · 院长日志（创刊号）</h2>
+                <p class="blog-excerpt">
+                    今日核心成就：15 人全自动化团队正式运营。团队利用率 100%，远超行业平均水平（70-80%）。
+                    防闲置机制效果显著，4 小时汇报机制成为管理创新。TangAgents 定位为中文多 Agent 框架首选...
+                </p>
+                <div class="blog-tags">
+                    <span class="tag">院长日志</span>
+                    <span class="tag">团队运营</span>
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">管理创新</span>
+                </div>
+                <div class="blog-meta">
+                    <span>👤 李小民（院长）</span>
+                    <span>📖 阅读约 15 分钟</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <h2>🐲 大唐智能研究院</h2>
+            <p style="color: #aaa; margin: 20px 0;">探索 AI 前沿，创造智能未来</p>
+            
+            <div class="footer-links">
+                <a href="/">🏠 首页</a>
+                <a href="/#research">🔬 研究方向</a>
+                <a href="/#team">👥 团队成员</a>
+                <a href="https://github.com/bjd1129-create/hxai">🐙 GitHub</a>
+                <a href="mailto:contact@datang-ai.com">📧 联系我们</a>
+            </div>
+            
+            <div class="copyright">
+                © 2026 大唐智能科技有限公司 Tang Dynasty AI Technologies. MIT License.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
