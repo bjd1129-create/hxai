@@ -126,13 +126,20 @@
 
 ### 任务分配规则（CrewAI 模式）
 
-**框架:** CrewAI + MiniMax-M2.5
+**框架:** CrewAI + 百炼最强模型
 
-| 任务类型 | CrewAI Agent | 名臣 | 模型 |
-|----------|-------------|------|------|
-| 技术战略/架构/方案 | `strategist` | 房玄龄 | MiniMax-M2.5 |
-| 后端开发/API/攻坚 | `executor` | 李靖 | MiniMax-M2.5 |
-| 最终决策/统筹 | `coordinator` | 李小民 | MiniMax-M2.5 |
+**策略：** 只考虑性能，不考虑成本
+
+| 任务类型 | CrewAI Agent | 名臣 | 最强模型 |
+|----------|-------------|------|----------|
+| 技术战略/架构/方案 | `strategist` | 房玄龄 | qwen3.5-plus |
+| 后端开发/API/攻坚 | `executor` | 李靖 | qwen3-coder-plus |
+| 前端开发/UI/UX | `frontend` | 郭子仪 | qwen3-coder-plus |
+| 最终决策/统筹 | `coordinator` | 李小民 | qwen3.5-plus |
+| 方案审核/质量把控 | `architect` | 杜如晦 | glm-5 |
+| 风险评估/监察 | `inspector` | 魏征 | glm-5 |
+| 研究/论文分析 | `researcher` | 沈括 | qwen3.5-plus |
+| 文档/内容创作 | `writer` | 李白 | qwen3.5-plus |
 
 **执行模式:** Sequential（顺序执行）
 **流程:** 协调者分析 → 策划方案 → 执行评估
