@@ -1,0 +1,11 @@
+name = "datang-ai"
+compatibility_date = "2026-03-23"
+
+[site]
+bucket = "."
+
+[build]
+command = "echo 'Static site'"
+
+[[pages_build_output_dir]]
+path = "."

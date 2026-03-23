@@ -1,0 +1,25 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'team-hexaflow/website/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: pages deploy team-hexaflow/website --project-name=datang-ai --branch=main
+      
+      - name: Deployment Complete
+        run: |
+          echo "✅ 部署完成！"
+          echo "🌐 访问：https://datang-ai.pages.dev"
