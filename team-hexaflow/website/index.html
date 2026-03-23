@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大唐智能 - Tang Dynasty AI | AI 研究公司</title>
-    <meta name="description" content="探索 AI 前沿，创造智能未来 - 大唐智能是一家专注于 AI 前沿技术研究的创新公司">
+    <title>大唐智能研究院 | AI 前沿技术研究</title>
+    <meta name="description" content="大唐智能研究院 - 专注于 AI 前沿技术研究，包括大语言模型、多模态 AI、AI Agent 系统、MLOps 与 AI 商业化">
     <style>
         * {
             margin: 0;
@@ -38,6 +38,7 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #E94560;
+            text-decoration: none;
         }
         
         .nav-links {
@@ -101,6 +102,7 @@
             text-decoration: none;
             font-weight: bold;
             transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
         }
         
         .btn-primary {
@@ -119,7 +121,7 @@
             box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
         }
         
-        /* Research Areas */
+        /* Section */
         .section {
             padding: 100px 20px;
             max-width: 1200px;
@@ -140,9 +142,10 @@
             font-size: 1.1em;
         }
         
+        /* Research Grid */
         .research-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
@@ -187,15 +190,16 @@
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            gap: 20px;
+            margin-top: 40px;
         }
         
         .team-card {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 30px;
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            border-radius: 10px;
+            padding: 20px;
             text-align: center;
-            border-top: 3px solid #E94560;
             transition: transform 0.3s;
         }
         
@@ -205,53 +209,24 @@
         
         .team-emoji {
             font-size: 3em;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
-        .team-card h3 {
-            color: #fff;
-            margin-bottom: 10px;
+        .team-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
         
         .team-role {
             color: #E94560;
             font-size: 0.9em;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
-        .team-responsibilities {
+        .team-desc {
             color: #aaa;
             font-size: 0.85em;
-            line-height: 1.8;
-        }
-        
-        /* Stats Section */
-        .stats-section {
-            background: rgba(233, 69, 96, 0.1);
-            padding: 80px 20px;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 3em;
-            color: #E94560;
-            font-weight: bold;
-        }
-        
-        .stat-label {
-            color: #aaa;
-            margin-top: 10px;
         }
         
         /* Footer */
@@ -259,11 +234,8 @@
             background: rgba(0, 0, 0, 0.3);
             padding: 60px 20px;
             text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
+            margin-top: 100px;
+            border-top: 1px solid rgba(233, 69, 96, 0.3);
         }
         
         .footer-links {
@@ -288,70 +260,33 @@
             color: #666;
             font-size: 0.9em;
         }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5em;
-            }
-            
-            nav {
-                padding: 15px 20px;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">🐲 大唐智能</div>
+        <a href="/" class="logo">🐲 大唐智能研究院</a>
         <div class="nav-links">
-            <a href="#research">研究方向</a>
-            <a href="#team">团队</a>
-            <a href="#publications">论文</a>
-            <a href="#blog">博客</a>
-            <a href="#contact">联系</a>
+            <a href="#research">🔬 研究方向</a>
+            <a href="#team">👥 团队成员</a>
+            <a href="blog/">📝 技术博客</a>
+            <a href="https://github.com/bjd1129-create/hxai">🐙 GitHub</a>
         </div>
     </nav>
     
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>🐲 大唐智能</h1>
-            <div class="subtitle">Tang Dynasty AI Technologies</div>
+            <h1>🐲 大唐智能研究院</h1>
+            <div class="subtitle">Tang Dynasty AI Research Institute</div>
             <div class="mission">
                 探索 AI 前沿，创造智能未来<br>
-                Exploring AI Frontiers, Creating Intelligent Future
+                专注于大语言模型、多模态 AI、AI Agent 系统与 MLOps 研究
             </div>
             <div class="cta-buttons">
-                <a href="#research" class="btn btn-primary">了解研究</a>
-                <a href="#team" class="btn btn-secondary">加入团队</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">12</div>
-                <div class="stat-label">核心成员</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">4</div>
-                <div class="stat-label">研究方向</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">年发表论文</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">年开源项目</div>
+                <a href="#research" class="btn btn-primary">🔬 研究方向</a>
+                <a href="#team" class="btn btn-secondary">👥 团队成员</a>
+                <a href="blog/" class="btn btn-secondary">📝 技术博客</a>
             </div>
         </div>
     </section>
@@ -369,6 +304,7 @@
                     <li>RAG 检索增强生成</li>
                     <li>Agent 协作系统</li>
                 </ul>
+                <div style="margin-top: 15px; color: #E94560; font-size: 0.9em;">负责人：李白</div>
             </div>
             
             <div class="research-card">
@@ -378,6 +314,7 @@
                     <li>视频内容分析</li>
                     <li>跨模态检索</li>
                 </ul>
+                <div style="margin-top: 15px; color: #E94560; font-size: 0.9em;">负责人：张衡</div>
             </div>
             
             <div class="research-card">
@@ -387,6 +324,7 @@
                     <li>任务规划与执行</li>
                     <li>人机交互</li>
                 </ul>
+                <div style="margin-top: 15px; color: #E94560; font-size: 0.9em;">负责人：沈括</div>
             </div>
             
             <div class="research-card">
@@ -396,6 +334,7 @@
                     <li>持续训练 pipeline</li>
                     <li>性能优化</li>
                 </ul>
+                <div style="margin-top: 15px; color: #E94560; font-size: 0.9em;">负责人：苏定方</div>
             </div>
             
             <div class="research-card" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.1);">
@@ -406,147 +345,159 @@
                     <li>商业模式设计</li>
                     <li>客户场景落地</li>
                 </ul>
-                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(251, 191, 36, 0.3); font-size: 0.85em; color: #fbbf24;">
-                    ⭐ 核心战略方向 - 所有研究的最终指向
-                </div>
+                <div style="margin-top: 15px; color: #fbbf24; font-size: 0.9em;">⭐ 核心战略方向 - 负责人：李小民</div>
             </div>
         </div>
     </section>
     
     <!-- Team Section -->
     <section class="section" id="team">
-        <h2 class="section-title">👥 核心团队</h2>
-        <p class="section-subtitle">Our Team - 12 人精英团队</p>
+        <h2 class="section-title">👥 团队成员</h2>
+        <p class="section-subtitle">Our Team - 15 人精英团队</p>
         
-        <div class="team-grid">
-            <!-- 决策层 -->
-            <div class="team-card">
-                <div class="team-emoji">🐲</div>
-                <h3>李小民</h3>
-                <div class="team-role">CEO/首席科学家</div>
-                <div class="team-responsibilities">
-                    战略决策<br>研究方向<br>团队管理
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: #E94560; margin-bottom: 20px; text-align: center;">🔷 决策层（3 人）</h3>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-emoji">🐲</div>
+                    <div class="team-name">李小民</div>
+                    <div class="team-role">CEO / 首席科学家</div>
+                    <div class="team-desc">战略决策、研究方向、团队管理</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">📜</div>
+                    <div class="team-name">房玄龄</div>
+                    <div class="team-role">CTO / 技术总监</div>
+                    <div class="team-desc">技术路线、架构设计、技术选型</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">⚖️</div>
+                    <div class="team-name">杜如晦</div>
+                    <div class="team-role">首席架构师</div>
+                    <div class="team-desc">方案审核、质量把控、性能优化</div>
                 </div>
             </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">📜</div>
-                <h3>房玄龄</h3>
-                <div class="team-role">CTO/技术总监</div>
-                <div class="team-responsibilities">
-                    技术路线<br>架构设计<br>技术选型
+        </div>
+        
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: #60a5fa; margin-bottom: 20px; text-align: center;">🔷 研究层（5 人）</h3>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-emoji">🔬</div>
+                    <div class="team-name">沈括</div>
+                    <div class="team-role">AI 研究院院长</div>
+                    <div class="team-desc">AI Agent 系统研究</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">📝</div>
+                    <div class="team-name">李白</div>
+                    <div class="team-role">NLP 首席科学家</div>
+                    <div class="team-desc">大语言模型研究</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">🎨</div>
+                    <div class="team-name">王维</div>
+                    <div class="team-role">CV 首席科学家</div>
+                    <div class="team-desc">计算机视觉研究</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">🌐</div>
+                    <div class="team-name">张衡</div>
+                    <div class="team-role">多模态科学家</div>
+                    <div class="team-desc">多模态 AI 研究</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">🎵</div>
+                    <div class="team-name">李贺</div>
+                    <div class="team-role">语音科学家</div>
+                    <div class="team-desc">语音识别与合成研究</div>
                 </div>
             </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">⚖️</div>
-                <h3>杜如晦</h3>
-                <div class="team-role">首席架构师</div>
-                <div class="team-responsibilities">
-                    方案审核<br>质量把控<br>性能优化
+        </div>
+        
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: #4ade80; margin-bottom: 20px; text-align: center;">🔷 工程层（5 人）</h3>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-emoji">⚔️</div>
+                    <div class="team-name">李靖</div>
+                    <div class="team-role">后端架构师</div>
+                    <div class="team-desc">后端系统、API 设计</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">🎨</div>
+                    <div class="team-name">郭子仪</div>
+                    <div class="team-role">前端架构师</div>
+                    <div class="team-desc">前端系统、UI/UX</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">🏹</div>
+                    <div class="team-name">薛仁贵</div>
+                    <div class="team-role">全栈工程师</div>
+                    <div class="team-desc">快速原型、系统集成</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">🐳</div>
+                    <div class="team-name">苏定方</div>
+                    <div class="team-role">DevOps/MLOps</div>
+                    <div class="team-desc">部署运维、模型监控</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-emoji">🔍</div>
+                    <div class="team-name">狄仁杰</div>
+                    <div class="team-role">数据工程师</div>
+                    <div class="team-desc">数据处理、数据洞察</div>
                 </div>
             </div>
-            
-            <!-- 研究层 -->
-            <div class="team-card">
-                <div class="team-emoji">🔬</div>
-                <h3>沈括</h3>
-                <div class="team-role">AI 研究院院长</div>
-                <div class="team-responsibilities">
-                    研究方向<br>论文评审<br>学术交流
+        </div>
+        
+        <div>
+            <h3 style="color: #fbbf24; margin-bottom: 20px; text-align: center;">🔷 支持层（2 人）</h3>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-emoji">🪞</div>
+                    <div class="team-name">魏征</div>
+                    <div class="team-role">质量与伦理官</div>
+                    <div class="team-desc">质量监察、AI 伦理、风险评估</div>
                 </div>
-            </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">📝</div>
-                <h3>李白</h3>
-                <div class="team-role">NLP 首席科学家</div>
-                <div class="team-responsibilities">
-                    NLP 研究<br>LLM 优化<br>论文撰写
-                </div>
-            </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">🎨</div>
-                <h3>王维</h3>
-                <div class="team-role">CV 首席科学家</div>
-                <div class="team-responsibilities">
-                    CV 研究<br>图像生成<br>论文撰写
-                </div>
-            </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">🌐</div>
-                <h3>张衡</h3>
-                <div class="team-role">多模态科学家</div>
-                <div class="team-responsibilities">
-                    多模态研究<br>跨模态学习<br>论文撰写
-                </div>
-            </div>
-            
-            <!-- 工程层 -->
-            <div class="team-card">
-                <div class="team-emoji">⚔️</div>
-                <h3>李靖</h3>
-                <div class="team-role">后端架构师</div>
-                <div class="team-responsibilities">
-                    后端系统<br>API 设计<br>性能优化
-                </div>
-            </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">🎨</div>
-                <h3>郭子仪</h3>
-                <div class="team-role">前端架构师</div>
-                <div class="team-responsibilities">
-                    前端系统<br>UI/UX<br>可视化
-                </div>
-            </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">🏹</div>
-                <h3>薛仁贵</h3>
-                <div class="team-role">全栈工程师</div>
-                <div class="team-responsibilities">
-                    快速原型<br>系统集成<br>技术攻坚
-                </div>
-            </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">🐳</div>
-                <h3>苏定方</h3>
-                <div class="team-role">DevOps/MLOps 工程师</div>
-                <div class="team-responsibilities">
-                    部署运维<br>MLOps<br>CI/CD
-                </div>
-            </div>
-            
-            <div class="team-card">
-                <div class="team-emoji">🪞</div>
-                <h3>魏征</h3>
-                <div class="team-role">质量与伦理官</div>
-                <div class="team-responsibilities">
-                    质量监察<br>AI 伦理<br>风险评估
+                
+                <div class="team-card">
+                    <div class="team-emoji">📋</div>
+                    <div class="team-name">姚崇</div>
+                    <div class="team-role">产品经理</div>
+                    <div class="team-desc">需求分析、产品规划、资源协调</div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="footer-content">
-            <h2>🐲 大唐智能</h2>
+            <h2>🐲 大唐智能研究院</h2>
             <p style="color: #aaa; margin: 20px 0;">探索 AI 前沿，创造智能未来</p>
             
             <div class="footer-links">
+                <a href="/">🏠 首页</a>
+                <a href="#research">🔬 研究方向</a>
+                <a href="#team">👥 团队成员</a>
+                <a href="blog/">📝 技术博客</a>
+                <a href="https://github.com/bjd1129-create/hxai">🐙 GitHub</a>
                 <a href="mailto:contact@datang-ai.com">📧 联系我们</a>
-                <a href="https://github.com/datang-ai">🐙 GitHub</a>
-                <a href="https://twitter.com/datang_ai">🐦 Twitter</a>
-                <a href="https://zhuanlan.zhihu.com/datang-ai">📖 知乎</a>
             </div>
             
             <div class="copyright">
-                © 2026 大唐智能科技有限公司 Tang Dynasty AI Technologies. All rights reserved.
+                © 2026 大唐智能科技有限公司 Tang Dynasty AI Technologies. MIT License.
             </div>
         </div>
     </footer>
