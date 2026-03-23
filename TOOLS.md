@@ -28,6 +28,19 @@
   - 图像理解：MiniMax-Vision-01
 - **状态:** ✅ 已配置
 
+### 百炼大模型（阿里云）
+- **Key:** `sk-sp-b879148afe854c45b2850757aa4997fd`
+- **平台:** https://bailian.console.aliyun.com
+- **Base URL (OpenAI 兼容):** https://coding.dashscope.aliyuncs.com/v1
+- **Base URL (Anthropic 兼容):** https://coding.dashscope.aliyuncs.com/apps/anthropic
+- **主用模型:** qwen3.5-plus ✅
+- **可用模型:**
+  - **千问系列:** qwen3.5-plus, qwen3-max-2026-01-23, qwen3-coder-next, qwen3-coder-plus
+  - **智谱系列:** glm-5, glm-4.7
+  - **Kimi 系列:** kimi-k2.5
+  - **MiniMax 系列:** minimax-m2.5
+- **状态:** ✅ 已配置（备选模型源）
+
 ---
 
 ## 新技能
