@@ -17,7 +17,7 @@
     "location": "中国"
   },
   "team": {
-    "size": 12,
+    "size": 15,
     "structure": "4-tier",
     "tier1_decision": {
       "name": "决策层",
@@ -145,6 +145,23 @@
             "视频分析"
           ],
           "emoji": "🌐"
+        },
+        {
+          "id": "lihe",
+          "name": "李贺",
+          "role": "语音科学家",
+          "prototype": "李贺",
+          "responsibilities": [
+            "语音识别",
+            "TTS 合成",
+            "诗词韵律研究"
+          ],
+          "skills": [
+            "语音处理",
+            "韵律分析",
+            "诗歌创作"
+          ],
+          "emoji": "🎵"
         }
       ]
     },
@@ -218,6 +235,23 @@
             "模型部署"
           ],
           "emoji": "🐳"
+        },
+        {
+          "id": "direnjie",
+          "name": "狄仁杰",
+          "role": "数据工程师",
+          "prototype": "狄仁杰",
+          "responsibilities": [
+            "数据处理",
+            "数据洞察",
+            "异常检测"
+          ],
+          "skills": [
+            "数据分析",
+            "模式识别",
+            "推理"
+          ],
+          "emoji": "🔍"
         }
       ]
     },
@@ -240,6 +274,23 @@
             "质量控制"
           ],
           "emoji": "🪞"
+        },
+        {
+          "id": "yaochong",
+          "name": "姚崇",
+          "role": "产品经理",
+          "prototype": "姚崇",
+          "responsibilities": [
+            "需求分析",
+            "产品规划",
+            "资源协调"
+          ],
+          "skills": [
+            "产品规划",
+            "资源协调",
+            "务实高效"
+          ],
+          "emoji": "📋"
         }
       ]
     }
